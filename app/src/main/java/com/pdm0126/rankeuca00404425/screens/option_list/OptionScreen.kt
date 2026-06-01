@@ -14,7 +14,7 @@ class OptionViewModel: ViewModel() {
 
     val uiState: StateFlow<OptionState> = _uiState.asStateFlow()
 
-    fun loadProducts() {
+    fun loadOptions() {
         _uiState.value = OptionState.Loading
         viewModelScope.launch {
             val result = repository.getOptions()
